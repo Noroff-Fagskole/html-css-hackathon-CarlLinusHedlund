@@ -4,8 +4,7 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 5px;
 }
 
 body {
@@ -20,6 +19,7 @@ body {
 .app-header {
   border-bottom: 1px solid #999;
   padding-bottom: 1em;
+  display: flex;
 }
 
 .inner {
@@ -29,12 +29,17 @@ body {
 }
 
 .app-logo {
-  display: inline-block;
+  display: inline-flex;
+}
+
+.app-navigation a {
+  margin-right: 3px;
 }
 
 .app-navigation {
+  margin-top: 2px;
   margin-left: 2em;
-  float: right;
+  display: inline-flex;
 }
 
 /* a:link, a:visited, a:active, a:hover */
@@ -44,22 +49,21 @@ body {
   padding: 0.5 em;
 }
 
-.app-navigation a:visited {
-  color: blue;
+.app-navigation a:hover {
+  color: #444;
 }
 
 .app-navigation a:active {
-  color: aqua;
+  color: #444;
 }
 
-.app-navigation a:hover {
-  color: green;
-  border-top: black;
+.app-navigation a:visited {
+  color: #444;
 }
 
 nav a {
   text-decoration: none;
-  color: black;
+  color: #444;
 }
 
 .app-logo img {
@@ -75,4 +79,52 @@ h1 {
 
 p {
   font-family: "Open Sans", sans-serif;
+}
+
+main img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto o auto;
+  display: block;
+}
+
+.color-red {
+  color: red;
+}
+
+form label {
+  display: block;
+}
+
+form fieldset {
+  margin: 0;
+  padding: 0%;
+  border-radius: 6px;
+}
+
+.input-text {
+  border: 1px solid #444;
+  padding: 0.2em;
+  color: #666;
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  background-color: coral;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em;
+  margin: 0;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(5, 2, 1);
+  border: none;
+  color: white;
+}
+
+form h5 {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
