@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        nav {
+            /*hide nav on load*/
+            display: block;
+            background-color: #fff;
+            padding: 0.5em;
+            border-bottom: 2px solid green;
+            width: 60%;
+            height: 90%;
+            border: orangered sol;
+            /* animate: default state on page load */
+            transition: all 300ms linear;
+            transform: translatex(-110%);
+            position: absolute;
+        }
+
+        .sr-only {
+            display: none;
+        }
+            
+
+        #hamburger-menu {
+            display: none;
+        }
+
+        #hamburger-menu:checked ~ nav{
+            /*show nav*/
+            display: block;
+            transform: translatex(0px);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <label for="hamburger-menu">
+         <span class="sr-only">Hemburger menu</span> 
+        <i class="fas fa-bars"></i>
+    </label>
+    <input type="checkbox" name="hamburger-menu" id="hamburger-menu">
+
+
+
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+
+    
+</body>
+</html>

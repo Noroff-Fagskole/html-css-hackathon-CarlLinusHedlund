@@ -19,7 +19,7 @@ body {
 .app-header {
   border-bottom: 1px solid #999;
   padding-bottom: 1em;
-  display: flex;
+  display: block;
 }
 
 .inner {
@@ -29,7 +29,7 @@ body {
 }
 
 .app-logo {
-  display: inline-flex;
+  display: inline-block;
 }
 
 .app-navigation a {
@@ -39,7 +39,7 @@ body {
 .app-navigation {
   margin-top: 2px;
   margin-left: 2em;
-  display: inline-flex;
+  float: right;
 }
 
 /* a:link, a:visited, a:active, a:hover */
@@ -55,6 +55,7 @@ body {
 
 .app-navigation a:active {
   color: #444;
+  border-bottom: rgb(25, 25, 106);
 }
 
 .app-navigation a:visited {
@@ -68,6 +69,71 @@ nav a {
 
 .app-logo img {
   width: 160px;
+}
+
+.app-navigation-drawer {
+  /*hide nav on load*/
+  display: block;
+  background-color: #fff;
+  border: black solid 2px;
+  border-radius: 5px 0 0 5px;
+  width: 90%;
+  height: 90%;
+
+  /* animate: default state on page load */
+  transition: all 300ms linear;
+  transform: translatex(200%);
+  position: absolute;
+  left: 0;
+  padding: 0px;
+}
+
+.app-navigation-drawer li {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 20px;
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ .app-navigation-drawer {
+  /*show nav*/
+  display: block;
+  transform: translatex(250px);
+}
+
+/* CSS comment */
+@media screen and (min-width: 767px) {
+  app-article {
+    display: inline-block;
+    border: brown 1px solid;
+    width: 60%;
+  }
+
+  .app-sidebar {
+    display: inline-block;
+    border: springgreen 1px solid;
+    width: 35%;
+    vertical-align: top;
+  }
+}
+.app-article {
+  display: inline-block;
+  border: brown 1px solid;
+  width: 60%;
+}
+
+.app-sidebar {
+  display: inline-block;
+  border: springgreen 1px solid;
+  width: 35%;
+  vertical-align: top;
 }
 
 h1 {
